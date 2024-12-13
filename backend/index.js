@@ -10,7 +10,7 @@ const app = express();
 // app.use(cors());
 
 app.use(cors({
-  origin: 'mini-proj-vehicle-managment-uzl2.vercel.app', // Frontend URL
+  origin: '*', // Frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 
