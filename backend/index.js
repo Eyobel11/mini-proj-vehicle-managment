@@ -8,9 +8,7 @@ const vehicleRoutes = require("./routes/vehicelRoutes");
 
 const app = express();
 
-const allowedOrigins =  "https://mini-proj-vehicle-managment-uzl2.vercel.app" // Frontend URL on Vercel
- 
-
+const allowedOrigins =  "https://mini-proj-vehicle-managment-uzl2.vercel.app"; // Frontend URL on Vercel
 
 // Use CORS middleware with custom options
 app.use(cors({
@@ -26,15 +24,6 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,  // Allow cookies if needed
 }));
-
-// Add a catch-all middleware to ensure headers are sent properly in Vercel
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://mini-proj-vehicle-managment-uzl2.vercel.app"); // Allow any origin or specify your frontend URL
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); // Allow specific methods
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization"); // Allow necessary headers
-  next();
-});
-
 
 app.use(bodyParser.json());
 
