@@ -10,7 +10,7 @@ const app = express();
 // app.use(cors());
 
 app.use(cors({
-  origin: '*', // Frontend URL
+  origin: 'https://mini-proj-vehicle-managment-4fox.vercel.app/', // Frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 
