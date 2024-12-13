@@ -19,7 +19,7 @@
       {
         "source": "/api/(.*)",
         "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "https://mini-proj-vehicle-managment-4fox.vercel.app/" },
+          { "key": "Access-Control-Allow-Origin", "value": "https://mini-proj-vehicle-managment-4fox.vercel.app" },
           { "key": "Access-Control-Allow-Methods", "value": "GET, POST, PUT, DELETE" },
           { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" }
         ]
