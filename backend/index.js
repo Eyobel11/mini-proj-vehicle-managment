@@ -7,12 +7,12 @@ require("dotenv").config();
 const vehicleRoutes = require("./routes/vehicelRoutes");
 
 const app = express();
-// app.use(cors());
+app.use(cors());
 
-app.use(cors({
-  origin: 'mini-proj-vehicle-managment-uzl2.vercel.app', // Frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-}));
+// app.use(cors({
+//   origin: 'mini-proj-vehicle-managment-uzl2.vercel.app', // Frontend URL
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+// }));
 
 app.use(bodyParser.json());
 
