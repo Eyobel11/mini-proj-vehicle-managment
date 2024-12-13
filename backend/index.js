@@ -8,7 +8,7 @@ const vehicleRoutes = require("./routes/vehicelRoutes");
 
 const app = express();
 
-const allowedOrigins =  "https://mini-proj-vehicle-managment-uzl2.vercel.app"; // Frontend URL on Vercel
+const allowedOrigins =  "https://mini-proj-vehicle-managment-uzl2.vercel.app/"; // Frontend URL on Vercel
 
 // Use CORS middleware with custom options
 app.use(cors({
