@@ -7,12 +7,29 @@ require("dotenv").config();
 const vehicleRoutes = require("./routes/vehicelRoutes");
 
 const app = express();
-app.use(cors());
 
-// app.use(cors({
-//   origin: 'mini-proj-vehicle-managment-uzl2.vercel.app', // Frontend URL
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-// }));
+
+const allowedOrigins = [
+  "https://mini-proj-vehicle-managment-uzl2.vercel.app",  // Vercel Frontend URL
+  "http://localhost:3000"  // Local development URL
+];
+
+
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,  
+}));
+
+
+
 
 app.use(bodyParser.json());
 
